@@ -10,12 +10,9 @@ public class BinarySearchImpl {
 
     public int binarySearch(int[] numbers, int ele){
 
-        //sorting
-        //BubbleSortAlgo bubbleSortAlgo = new BubbleSortAlgo();
-        //bubbleSortAlgo.sort(numbers);
+        int[] res= sortAlgorithm.sort(numbers);
+        System.out.println(res);
 
-        QuickSortAlgorithm quickSortAlgorithm = new QuickSortAlgorithm();
-        quickSortAlgorithm.sort(numbers);
         return 3;
     }
 
