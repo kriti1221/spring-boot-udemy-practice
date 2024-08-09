@@ -1,13 +1,15 @@
 package com.spring.basics.learning_udemy;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class LearningUdemyApplication {
 
 	public static void main(String[] args) {
-		BinarySearchImpl obj = new BinarySearchImpl(new BubbleSortAlgo());
-		int[] arr = {12,3,4};
-		int result = obj.binarySearch(arr , 4);
+		ApplicationContext applicationContext = SpringApplication.run(LearningUdemyApplication.class, args);
+		BinarySearchImpl obj =  applicationContext.getBean(BinarySearchImpl.class);
+		int result = obj.binarySearch(new int[]{12,3,4} , 4);
 		System.out.println(result);
 	}
 }
