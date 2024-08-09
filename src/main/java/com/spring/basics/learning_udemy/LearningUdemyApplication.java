@@ -1,13 +1,13 @@
 package com.spring.basics.learning_udemy;
-
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class LearningUdemyApplication {
 
 	public static void main(String[] args) {
-
-		System.out.println("Learning Udemy Application");
+		BinarySearchImpl obj = new BinarySearchImpl();
+		int[] arr = {12,3,4};
+		int result = obj.binarySearch(arr , 4);
+		System.out.println(result);
 	}
-
 }
