@@ -8,9 +8,6 @@ public class BinarySearchImpl {
 
     @Autowired
     SortAlgorithm sortAlgorithm;
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
-    }
 
     public int binarySearch(int[] numbers, int ele){
 
