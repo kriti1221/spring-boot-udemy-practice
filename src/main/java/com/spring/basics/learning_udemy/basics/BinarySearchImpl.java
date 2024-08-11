@@ -1,17 +1,18 @@
 package com.spring.basics.learning_udemy.basics;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
 public class BinarySearchImpl {
 
-    @Autowired
+    @Inject
     SortAlgorithm sortAlgorithm;
 
     public int binarySearch(int[] numbers, int ele){
 
-        int[] res= sortAlgorithm.sort(numbers);
+        int[] res = sortAlgorithm.sort(numbers);
 
         return 3;
     }
