@@ -10,11 +10,20 @@ public class BinarySearchImpl {
     @Inject
     SortAlgorithm sortAlgorithm;
 
+    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+        this.sortAlgorithm = sortAlgorithm;
+    }
+
     public int binarySearch(int[] numbers, int ele){
 
         int[] res = sortAlgorithm.sort(numbers);
 
-        return 3;
+        for (int i = 0; i < res.length; i++){
+            if (res[i] == ele){
+                return i;
+            }
+        }
+        return -1;
     }
 
 }
